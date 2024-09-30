@@ -1,0 +1,52 @@
+<mat-card appearance="outlined">
+  <mat-card-header class="margin-bottom-15">
+    <mat-card-title> Add item</mat-card-title>
+    <mat-card-subtitle>Fill in all the fields below</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-card-content class="display-grid">
+    <mat-form-field class="input-form-field">
+      <mat-label>Enter the title</mat-label>
+      <input matInput type="text" [(ngModel)]="title"> <!-- Ne ajuta sa facem o legatura intre variabilele din Typescript si componentele din html -->
+      @if (title) {
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="title=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      }
+    </mat-form-field>
+
+    <mat-form-field class="input-form-field">
+      <mat-label>Enter the description</mat-label>
+      <input matInput type="text" [(ngModel)]="description"> <!-- Ne ajuta sa facem o legatura intre variabilele din Typescript si componentele din html -->
+      @if (description) {
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="description=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      }
+    </mat-form-field>
+
+    <mat-form-field class="input-form-field">
+      <mat-label>Enter the price</mat-label>
+      <input matInput type="text" [(ngModel)]="price"> <!-- Ne ajuta sa facem o legatura intre variabilele din Typescript si componentele din html -->
+      @if (price) {
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="price=0">
+          <mat-icon>close</mat-icon>
+        </button>
+      }
+    </mat-form-field>
+
+    <mat-form-field class="input-form-field">
+      <mat-label>Enter the image URL</mat-label>
+      <input matInput type="text" [(ngModel)]="imageUrl"> <!-- Ne ajuta sa facem o legatura intre variabilele din Typescript si componentele din html -->
+      @if (imageUrl) {
+        <button matSuffix mat-icon-button aria-label="Clear" (click)="imageUrl=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      }
+    </mat-form-field>
+
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button (click)="showValue()">Add item now!</button> <!-- click intre parantezele rotunde se numeste eveniment = event -->
+  </mat-card-actions>
+</mat-card>
