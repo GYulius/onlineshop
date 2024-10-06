@@ -1,0 +1,17 @@
+<div>
+  <p *ngFor="let item of itemsList">
+    {{item}} <!--interpolare de stringuri, folosind aceste acolade duble = modalitate de afisare a valorii unei variabile in html-- pentru comentariu: ctrl / -->
+  </p>
+</div>
+
+<!--acesta este un template-->
+<mat-card *ngFor="let item of itemsList">
+  <mat-card-content>
+    <p>Title: {{item.title}}</p>
+    <p>Description: {{item.description}}</p>
+    <p>Price: {{item.price}}</p>
+    <p>ImageUrl: {{item.imageUrl}}</p>
+  </mat-card-content>
+</mat-card>
+
+

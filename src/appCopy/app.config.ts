@@ -6,5 +6,5 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import {provideHttpClient} from "@angular/common/http";
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideAnimationsAsync(), provideHttpClient()] // adaugat ultimul pentru ca browser-ul nu stie sa faca decat get
+  providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideAnimationsAsync(), provideHttpClient()] //adaugat ultimul pentru ca browser-ul nu stie sa facaa decat GET
 };

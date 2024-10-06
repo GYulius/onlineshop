@@ -5,20 +5,20 @@ import {AuthComponent} from "./auth/auth.component";
 
 export const routes: Routes = [
   {
-    path: 'dashboard',
-    component: DashboardComponent,
+    path: "dashboard",
+    component: DashboardComponent
   },
   {
-    path: 'home',
-    component: HomeComponent,
+    path: "home",
+    component: HomeComponent
   },
   {
-    path: 'auth',
-    component: AuthComponent,
+    path: "auth",
+    component: AuthComponent
   },
   {
-    path: '',
-    redirectTo: 'dashboard',
-    pathMatch: 'full',
+    path: "",
+    redirectTo: "dashboard",
+    pathMatch: "full"
   }
 ];

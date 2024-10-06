@@ -1,17 +1,20 @@
-<div>
-  <p *ngFor="let item of itemsList">
-    {{item}} <!--interpolare de stringuri, folosind aceste acolade duble = modalitate de afisare a valorii unei variabile in html-- pentru comentariu: ctrl / -->
-  </p>
-</div>
+<!-- let = variabila de scop/local, var = variabila globala -->
 
-<!--acesta este un template-->
+<!--<div>-->
+<!--  <p *ngFor="let item of itemsList"> &lt;!&ndash; asa se parcurge / afiseaza o lista in HTML &ndash;&gt;-->
+<!--    {{item}} &lt;!&ndash; interpolare de stringuri cu acolade duble = modalitate de afisare a valorii unei variabile in HTML&ndash;&gt;-->
+<!--  </p>-->
+<!--</div>-->
+<!-- acesta este un template -->
 <mat-card *ngFor="let item of itemsList">
   <mat-card-content>
     <p>Title: {{item.title}}</p>
     <p>Description: {{item.description}}</p>
     <p>Price: {{item.price}}</p>
-    <p>ImageUrl: {{item.imageUrl}}</p>
+    <p>ImageURL: {{item.imageUrl}}</p>
   </mat-card-content>
+  <mat-card-actions>
+    <button mat-flat-button (click)="onDeleteItem(item.id)">Delete</button>
+    <button mat-flat-button (click)="onEditItem(item)">Edit</button>
+  </mat-card-actions>
 </mat-card>
-
-

@@ -1,7 +1,7 @@
 <mat-card appearance="outlined">
-  <mat-card-header class="margin-bottom-15">
-    <mat-card-title> Add Item</mat-card-title>
-    <mat-card-subtitle>Complete all the fields bellow</mat-card-subtitle>
+  <mat-card-header class="margin-bottom-15 margin-bottom-100">
+    <mat-card-title> Add item</mat-card-title>
+    <mat-card-subtitle>Fill in all the fields below</mat-card-subtitle>
   </mat-card-header>
 
   <mat-card-content class="display-grid">
@@ -47,6 +47,6 @@
 
   </mat-card-content>
   <mat-card-actions>
-    <button mat-button (click)="submitForm()">{{ item == null ? 'Add' : 'Update' }} item</button> <!--- click intre paranteze rotunde se numeste event. -->
+    <button mat-button (click)="showValue()">Add item now!</button> <!-- click intre parantezele rotunde se numeste eveniment = event -->
   </mat-card-actions>
 </mat-card>

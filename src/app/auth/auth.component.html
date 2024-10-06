@@ -1,1 +1,91 @@
-<p>auth works!</p>
+<div>
+<!-- username, email, password, confirm password -->
+  <mat-card appearance="outlined">
+    <mat-card-header class="margin-bottom-15">
+      <mat-card-title> Create account</mat-card-title>
+      <mat-card-subtitle>Complete all the fields bellow</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content class="display-grid">
+      <mat-form-field class="input-form-field">
+        <mat-label>Enter the username</mat-label>
+        <input matInput type="text" [(ngModel)]="username"> <!-- Ne ajuta sa facem o legatura intre variabilele din Typescript si componentele din html -->
+        @if (username) {
+          <button matSuffix mat-icon-button aria-label="Clear" (click)="username=''">
+            <mat-icon>close</mat-icon>
+          </button>
+        }
+      </mat-form-field>
+
+      <mat-form-field class="input-form-field">
+        <mat-label>Enter the email</mat-label>
+        <input matInput type="text" [(ngModel)]="email"> <!-- Ne ajuta sa facem o legatura intre variabilele din Typescript si componentele din html -->
+        @if (email) {
+          <button matSuffix mat-icon-button aria-label="Clear" (click)="email=''">
+            <mat-icon>close</mat-icon>
+          </button>
+        }
+      </mat-form-field>
+
+      <mat-form-field class="input-form-field">
+        <mat-label>Enter the password</mat-label>
+        <input matInput type="password" [(ngModel)]="password"> <!-- Ne ajuta sa facem o legatura intre variabilele din Typescript si componentele din html -->
+        @if (password) {
+          <button matSuffix mat-icon-button aria-label="Clear" (click)="password=''">
+            <mat-icon>close</mat-icon>
+          </button>
+        }
+      </mat-form-field>
+
+      <mat-form-field class="input-form-field">
+        <mat-label>Confirm the password</mat-label>
+        <input matInput type="password" [(ngModel)]="confirmPassword"> <!-- Ne ajuta sa facem o legatura intre variabilele din Typescript si componentele din html -->
+        @if (confirmPassword) {
+          <button matSuffix mat-icon-button aria-label="Clear" (click)="confirmPassword=''">
+            <mat-icon>close</mat-icon>
+          </button>
+        }
+      </mat-form-field>
+
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="submitRegisterForm()">Register</button> <!--- click intre paranteze rotunde se numeste event. -->
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card appearance="outlined">
+    <mat-card-header class="margin-bottom-15">
+      <mat-card-title> Login to account</mat-card-title>
+      <mat-card-subtitle>Complete all the fields bellow</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content class="display-grid">
+
+      <mat-form-field class="input-form-field">
+        <mat-label>Enter the email</mat-label>
+        <input matInput type="text" [(ngModel)]="email"> <!-- Ne ajuta sa facem o legatura intre variabilele din Typescript si componentele din html -->
+        @if (email) {
+          <button matSuffix mat-icon-button aria-label="Clear" (click)="email=''">
+            <mat-icon>close</mat-icon>
+          </button>
+        }
+      </mat-form-field>
+
+      <mat-form-field class="input-form-field">
+        <mat-label>Enter the password</mat-label>
+        <input matInput type="password" [(ngModel)]="password"> <!-- Ne ajuta sa facem o legatura intre variabilele din Typescript si componentele din html -->
+        @if (password) {
+          <button matSuffix mat-icon-button aria-label="Clear" (click)="password=''">
+            <mat-icon>close</mat-icon>
+          </button>
+        }
+      </mat-form-field>
+
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button (click)="submitLoginForm()">Login</button> <!--- click intre paranteze rotunde se numeste event. -->
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<!--TODO: arata-ne cum se face squash-->
