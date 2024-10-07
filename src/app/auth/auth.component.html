@@ -1,6 +1,6 @@
 <div>
 <!-- username, email, password, confirm password -->
-  <mat-card appearance="outlined">
+  <mat-card *ngIf="authType != 'login'" appearance="outlined">
     <mat-card-header class="margin-bottom-15">
       <mat-card-title> Create account</mat-card-title>
       <mat-card-subtitle>Complete all the fields bellow</mat-card-subtitle>
@@ -50,10 +50,11 @@
     </mat-card-content>
     <mat-card-actions>
       <button mat-button (click)="submitRegisterForm()">Register</button> <!--- click intre paranteze rotunde se numeste event. -->
+      <button mat-button (click)="onAuthTypeChange('login')">Back to login</button>
     </mat-card-actions>
   </mat-card>
 
-  <mat-card appearance="outlined">
+  <mat-card *ngIf="authType == 'login'" appearance="outlined">
     <mat-card-header class="margin-bottom-15">
       <mat-card-title> Login to account</mat-card-title>
       <mat-card-subtitle>Complete all the fields bellow</mat-card-subtitle>
@@ -84,8 +85,9 @@
     </mat-card-content>
     <mat-card-actions>
       <button mat-button (click)="submitLoginForm()">Login</button> <!--- click intre paranteze rotunde se numeste event. -->
+      <button mat-button (click)="onAuthTypeChange('register')">Create an account?</button>
     </mat-card-actions>
   </mat-card>
 </div>
 
-<!--TODO: arata-ne cum se face squash-->
+
